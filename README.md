@@ -1,3 +1,4 @@
 #durableMap
 
-Blazingly fast **durable** high concurrent HashMap 
+durableMap is in-memory, durable storage
+optimized for ( write-heavy, read-heavy )
