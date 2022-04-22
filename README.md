@@ -8,11 +8,6 @@ optimized for ( write-heavy, read-heavy )
 it is a concurrent hashMap using NonBlocking wal engine for persist to disk 
 it avoid any loss data
 
-
-# crates.io
-https://crates.io/crates/rstorage
-
-
 # Example
 
  ```rust
@@ -62,3 +57,11 @@ https://crates.io/crates/rstorage
  
 ``` 
  
+ 
+ # Installation
+ ``` 
+ [dependencies]
+ 
+ rstorage = "1.0.0"
+ 
+ ``` 
