@@ -3,9 +3,12 @@
 durableMap is in-memory, durable storage
 optimized for ( write-heavy, read-heavy )
 
+
 # Why need to DurableMap ??
+
 it is a hashMap using NonBlocking wal engine for persist to disk, 
 it avoid any loss data
+
 
 
 # Example
