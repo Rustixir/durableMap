@@ -22,16 +22,25 @@ https://crates.io/crates/rstorage
  
      
      // Optimized for write concurrent (API is same) 
-     // let dl1 = WConcurrentStorage::<Document>::open("tester".to_owned(), 1000).await;
-     
-     // Optimized for read concurrent
-     let dl = RConcurrentStorage::<Document>::open("tester".to_owned(), 1000).await;
+    // let dl1 = WConcurrentStorage::<Document>::open("tester".to_owned(), 1000).await;
+    
+    // Optimized for read concurrent
+    let dl = RConcurrentStorage::<Document>::open("tester".to_owned(), 1000).await;
  
-         for elem in 0..50_000 {
-             let _ = dl.insert_entry(format!("{}", elem), 
-                                     Document::new()).await;
-                            
-         }
+    
+    // Insert / Update
+    let _ = dl.insert_entry(format!("102xa"), Document::new()).await;
+    
+    // Remove
+    dl.remove_entry(&format("102xa")).await;
+
+    // Read
+    dl.table.read().await
+            .iter()
+            .for_each(|(key, doc)| {
+                println!("==> {} -> {}", key, &doc.funame)
+            });
+            
  }
  
  
