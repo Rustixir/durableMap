@@ -3,8 +3,10 @@
 durableMap is in-memory, durable storage
 optimized for ( write-heavy, read-heavy )
 
-durableMap used NonBlocking wal engine for persist 
-to disk, void any loss data
+# Why need to DurableMap ??
+it is a hashMap using NonBlocking wal engine for persist to disk, 
+it avoid any loss data
+
 
 # Example
 
@@ -43,18 +45,6 @@ to disk, void any loss data
  }
  
  
-struct Document {
-   funame: String,
-    age: i32,
-}
-impl Document {
-     pub fn new() -> Self {
-         Document { 
-             funame: String::from("DanyalMhai@gmail.com"), 
-             age: 24, 
-         }
-     }
- }
  
 ``` 
  
