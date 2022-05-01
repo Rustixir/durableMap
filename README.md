@@ -1,4 +1,12 @@
 # durableMap
+<div align="center">
+
+  <!-- Downloads -->
+  <a href="https://crates.io/crates/rstorage">
+    <img src="https://img.shields.io/crates/d/rstorage.svg?style=flat-square"
+      alt="Download" />
+  </a>
+</div>
 
 durableMap is in-memory, durable storage
 optimized for ( write-heavy, read-heavy )
